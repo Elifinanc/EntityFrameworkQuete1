@@ -33,7 +33,7 @@ namespace FrameworkEntityQuete1
 
                 context.SaveChanges();
 
-                double WinResult = SavingCalculator.CalculateTotalSaved(Convert.ToDateTime(02 - 02 - 2017), Convert.ToDateTime(03 - 03 - 2020), newPerson.SaList);
+                double WinResult = SavingCalculator.CalculateTotalSaved(DateTime.Now.AddYears(-3), DateTime.Now, newPerson.SaList);
 
                 MessageBox.Show("For this period you have earned a total of :" , Convert.ToString(WinResult),
                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
